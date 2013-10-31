@@ -1,0 +1,15 @@
+[user]
+	name = Guilherme Simoes
+	email = guilherme.rdems@gmail.com
+[color]
+	ui = auto
+[core]
+	whitespace = trailing-space,space-before-tab
+[alias]
+	alias = config --get-regexp 'alias.*'
+	amend = commit --amend
+	co = checkout
+	patch = add --patch
+	st = status
+[push]
+	default = current
