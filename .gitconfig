@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	whitespace = trailing-space,space-before-tab
+	editor = vim
 [alias]
 	alias = config --get-regexp 'alias.*'
 	amend = commit --amend
