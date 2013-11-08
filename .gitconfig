@@ -12,5 +12,6 @@
 	co = checkout
 	patch = add --patch
 	st = status
+	cont = rebase --continue
 [push]
 	default = current
