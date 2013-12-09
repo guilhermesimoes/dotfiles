@@ -10,7 +10,7 @@
 	alias = config --get-regexp 'alias.*'
 	amend = commit --amend
 	co = checkout
-	patch = add --patch
+	pa = add --patch
 	st = status
 	cont = rebase --continue
 [push]
