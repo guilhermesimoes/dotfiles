@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"draw_white_space": "all",
+	"font_size": 20,
+	"highlight_modified_tabs": true,
+	"trim_trailing_white_space_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".bundle",
+		".git",
+		".sass-cache",
+		"coverage",
+		"tmp"
+	]
+}
