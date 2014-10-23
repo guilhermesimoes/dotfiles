@@ -13,5 +13,7 @@
 	pa = add --patch
 	st = status
 	cont = rebase --continue
+	del = branch -d
+	rdel = push --delete origin
 [push]
 	default = current
