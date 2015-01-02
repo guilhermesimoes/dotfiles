@@ -10,9 +10,9 @@
 	alias = config --get-regexp 'alias.*'
 	amend = commit --amend
 	co = checkout
-	lstash = stash show -p stash@{0}
 	pa = add --patch
 	st = status
+	vstash = "!f() { stash=${1-0}; git stash show -p stash@{$stash}; }; f"
 	cont = rebase --continue
 	del = branch -d
 	rdel = push --delete origin
