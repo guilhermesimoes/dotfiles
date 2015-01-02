@@ -7,7 +7,7 @@
 	whitespace = trailing-space,space-before-tab
 	editor = vim
 [alias]
-	alias = config --get-regexp 'alias.*'
+	aliases = "!f() { git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort; }; f"
 	amend = commit --amend
 	co = checkout
 	pa = add --patch
