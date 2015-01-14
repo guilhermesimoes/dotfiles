@@ -1,15 +1,25 @@
 {
+	// Set the default theme
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-	"draw_white_space": "all",
+	// Set default font size
 	"font_size": 20,
+	// Draw all white space
+	"draw_white_space": "all",
+	// Make tabs with modified files more visible
 	"highlight_modified_tabs": true,
+	// Remove trailing white space on save
 	"trim_trailing_white_space_on_save": true,
+	// Ensure the last line of the file ends in a newline character on save
+	"ensure_newline_at_eof_on_save": true,
+	// Prevent these files and folders from appearing in the sidebar search results
 	"folder_exclude_patterns":
 	[
 		".bundle",
 		".git",
 		".sass-cache",
 		"coverage",
-		"tmp"
+		"tmp",
+		"node_modules",
+		"bower_components"
 	]
 }
