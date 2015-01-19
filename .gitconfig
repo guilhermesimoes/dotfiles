@@ -16,5 +16,6 @@
 	cont = rebase --continue
 	del = branch -d
 	rdel = push --delete origin
+	reb = "!f() { echo 'Stashing unstaged changes'; git stash; git rebase -i HEAD~${1}; }; f"
 [push]
 	default = current
