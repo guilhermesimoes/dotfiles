@@ -1,0 +1,6 @@
+*.md       diff=markdown
+*.py       diff=python
+*.python   diff=python
+*.rb       diff=ruby
+*.ruby     diff=ruby
+*.tex      diff=tex
