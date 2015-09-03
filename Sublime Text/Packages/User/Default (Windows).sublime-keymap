@@ -30,6 +30,10 @@
 	"command": "select_lines",
 	"args": {"forward": true}
 },
+{
+	"keys": ["f5"],
+	"command": "revert"
+},
 {	// Set a keybing for the SublimeERB package
 	"keys": ["ctrl+."],
 	"command": "erb"
