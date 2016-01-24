@@ -2,20 +2,37 @@
 	name = Guilherme Simoes
 	email = guilherme.rdems@gmail.com
 [color]
+	# Enable colors
 	ui = auto
 [core]
+	# Detect and color whitespace issues when `git diff` is run
 	whitespace = trailing-space,space-before-tab
+
+	# Set text editor
 	editor = vim
 [alias]
+	# List aliases. How meta!
 	aliases = "!f() { git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort; }; f"
-	amend = commit --amend
-	co = checkout
-	pa = add --patch
-	st = status
+
+	# Show last stash if no argument is given, otherwise show nth stash
 	vstash = "!f() { stash=${1-0}; git stash show -p stash@{$stash}; }; f"
+
+	# Interactive rebase up to the nth commit
+	reb = "!f() { echo 'Stashing unstaged changes'; git stash; git rebase -i HEAD~$1; }; f"
+
+	amend = commit --amend
+
+	co = checkout
+
+	pa = add --patch
+
+	st = status
+
 	cont = rebase --continue
+
 	del = branch -d
+
 	rdel = push --delete origin
-	reb = "!f() { echo 'Stashing unstaged changes'; git stash; git rebase -i HEAD~${1}; }; f"
 [push]
+	# Push only the current branch with `git push`
 	default = current
