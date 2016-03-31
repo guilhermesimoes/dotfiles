@@ -36,6 +36,8 @@
 	del = branch -d
 
 	rdel = push --delete origin
+
+	watwork = reflog show --date=format:'%Y-%m-%d %H:%M'
 [push]
 	# Push only the current branch with `git push`
 	default = current
