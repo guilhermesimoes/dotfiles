@@ -1,0 +1,3 @@
+[commit]
+	template = .git/commit-template
+

@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# For more information check https://git-scm.com/docs/githooks#_prepare_commit_msg
+
+commit_file   = ARGV[0]
+commit_source = ARGV[1]
+
+if commit_source == "template"
+  commit_template = File.read(commit_file)
+  template_vars = {
+    branch_name: `git rev-parse --abbrev-ref HEAD`.chomp!
+  }
+  commit_message = commit_template % template_vars
+  File.write(commit_file, commit_message)
+end
