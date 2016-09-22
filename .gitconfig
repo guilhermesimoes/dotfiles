@@ -43,3 +43,6 @@
 [push]
 	# Push only the current branch with `git push`
 	default = current
+[pull]
+	# Avoid merges when pulling
+	rebase = true
