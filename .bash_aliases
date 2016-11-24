@@ -12,3 +12,6 @@ alias clipboard="xclip -selection clipboard"
 
 # Record the screen
 alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
+
+# Prettify json
+alias prettyjson="python -m json.tool"
