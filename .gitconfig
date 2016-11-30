@@ -39,7 +39,7 @@
 
 	watwork = reflog show --date=format:'%Y-%m-%d %H:%M'
 [diff]
-	compactionHeuristic = true
+	indentHeuristic = true
 [push]
 	# Push only the current branch with `git push`
 	default = current
