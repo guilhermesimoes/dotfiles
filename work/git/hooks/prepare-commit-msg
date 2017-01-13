@@ -4,6 +4,7 @@
 commit_file   = ARGV[0]
 commit_source = ARGV[1]
 
+# This check is important otherwise the commit message is overriden when using `amend`
 if commit_source == "template"
   commit_template = File.read(commit_file)
   template_vars = {
