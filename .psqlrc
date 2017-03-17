@@ -1,0 +1,8 @@
+-- Differentiate null from whitespace strings
+\pset null '¤'
+
+-- Use best available output format
+\x auto
+
+-- Autocomplete keywords in upper-case even if started lower-case
+\set COMP_KEYWORD_CASE upper
