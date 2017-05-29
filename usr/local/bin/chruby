@@ -2,13 +2,16 @@
 
 require 'fileutils'
 
-if ARGV.empty?
+if !ARGV.empty?
+  desired_ruby = "ruby-#{ARGV[0]}"
+elsif File.file?('.ruby-version')
+  desired_ruby = "ruby-#{File.read('.ruby-version').strip}"
+else
   puts 'Missing Ruby version!'
   exit 0
 end
 
 FileUtils.chdir('/Users/guilherme/Programs') do
-  desired_ruby = "ruby-#{ARGV[0]}"
   available_rubies = Dir.glob('ruby-*')
 
   if available_rubies.include?(desired_ruby)
