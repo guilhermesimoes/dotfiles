@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+if ARGV.empty?
+  puts 'Missing Ruby version!'
+  exit 0
+end
+
+FileUtils.chdir('/Users/guilherme/Programs') do
+  desired_ruby = "ruby-#{ARGV[0]}"
+  available_rubies = Dir.glob('ruby-*')
+
+  if available_rubies.include?(desired_ruby)
+    `ln -sfn #{desired_ruby} ruby`
+  else
+    puts "#{desired_ruby} is not installed."
+    puts 'Available Rubies are:'
+    available_rubies.each do |available_ruby|
+      puts available_ruby
+    end
+  end
+end
