@@ -2,25 +2,29 @@
 
 require 'fileutils'
 
-if !ARGV.empty?
-  desired_ruby = "ruby-#{ARGV[0]}"
-elsif File.file?('.ruby-version')
-  desired_ruby = "ruby-#{File.read('.ruby-version').strip}"
-else
-  puts 'Missing Ruby version!'
-  exit 0
+def print_help(header, available_rubies)
+  puts header
+  puts 'Available Rubies are:'
+  available_rubies.each do |available_ruby|
+    puts available_ruby
+  end
 end
 
 FileUtils.chdir('/Users/guilherme/Programs') do
-  available_rubies = Dir.glob('ruby-*')
+  available_rubies = Dir.glob('ruby-*').map { |ruby| ruby.sub('ruby-', '') }
+
+  if !ARGV.empty?
+    desired_ruby = ARGV[0]
+  elsif File.file?('.ruby-version')
+    desired_ruby = File.read('.ruby-version').strip
+  else
+    print_help('Missing Ruby version!', available_rubies)
+    exit 0
+  end
 
   if available_rubies.include?(desired_ruby)
-    `ln -sfn #{desired_ruby} ruby`
+    `ln -sfn ruby-#{desired_ruby} ruby`
   else
-    puts "#{desired_ruby} is not installed."
-    puts 'Available Rubies are:'
-    available_rubies.each do |available_ruby|
-      puts available_ruby
-    end
+    print_help("#{desired_ruby} is not installed.", available_rubies)
   end
 end
