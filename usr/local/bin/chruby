@@ -6,7 +6,7 @@ def print_help(header, available_rubies)
   puts header
   puts 'Available Rubies are:'
   available_rubies.each do |available_ruby|
-    puts available_ruby
+    puts "#{available_ruby == RUBY_VERSION ? '*' : ' '} #{available_ruby}"
   end
 end
 
