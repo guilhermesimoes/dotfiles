@@ -17,22 +17,21 @@
 	# List aliases. How meta!
 	aliases = "!f() { git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort; }; f"
 
-	# Show last stash if no argument is given, otherwise show nth stash
-	vstash = "!f() { stash=${1-0}; git stash show -p stash@{$stash}; }; f"
-
 	# List remote branches ordered by the last time they were updated
 	rbranches = "!f() { for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format='%ci %cr' $branch | head -n 1` \\t$branch; done | sort -r; }; f"
 
 	# Interactive rebase up to the nth commit
 	reb = "!f() { echo 'Stashing unstaged changes'; git stash; git rebase -i HEAD~$1; }; f"
 
+	# Show last stash if no argument is given, otherwise show nth stash
+	vstash = "!f() { stash=${1-0}; git stash show -p stash@{$stash}; }; f"
+
+	# Show where and when HEAD has been
+	watwork = reflog show --date=format:'%Y-%m-%d %H:%M'
+
 	amend = commit --amend
 
 	co = checkout
-
-	pa = add --patch
-
-	st = status
 
 	cont = rebase --continue
 
@@ -40,7 +39,9 @@
 
 	rdel = push --delete origin
 
-	watwork = reflog show --date=format:'%Y-%m-%d %H:%M'
+	pa = add --patch
+
+	st = status
 [diff]
 	indentHeuristic = true
 [push]
