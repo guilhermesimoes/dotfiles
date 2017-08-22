@@ -23,10 +23,19 @@
 	# Interactive rebase up to the nth commit
 	reb = "!f() { echo 'Stashing unstaged changes'; git stash; git rebase -i HEAD~$1; }; f"
 
+	# List all my commits
+	recap = !git log --all --oneline --no-merges --author=${1-$(git config user.email)}
+
+	# List people ordered by commits count
+	stats = shortlog -sn --all --no-merges
+
+	# List my commits created today
+	today = !git log --all --since=00:00:00 --oneline --no-merges --author=${1-$(git config user.email)}
+
 	# Show last stash if no argument is given, otherwise show nth stash
 	vstash = "!f() { stash=${1-0}; git stash show -p stash@{$stash}; }; f"
 
-	# Show where and when HEAD has been
+	# List where and when HEAD has been
 	watwork = reflog show --date=format:'%Y-%m-%d %H:%M'
 
 	amend = commit --amend
