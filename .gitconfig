@@ -1,6 +1,9 @@
 [user]
 	name = Guilherme Simoes
-	email = guilherme.rdems@gmail.com
+
+	# Forces name and email to be set.
+	# Email is not globally set so that I don't accidentally commit with the wrong email.
+	useconfigonly = true
 [color]
 	# Enable colors
 	ui = auto
