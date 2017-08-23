@@ -23,8 +23,8 @@
 	# Interactive rebase up to the nth commit
 	reb = "!f() { echo 'Stashing unstaged changes'; git stash; git rebase -i HEAD~$1; }; f"
 
-	# List all my commits
-	recap = !git log --all --oneline --no-merges --author=${1-$(git config user.email)}
+	# List all my commits ordered by date
+	recap = !git log --all --no-merges --author=${1-$(git config user.email)} --pretty=format:'%h %ad %s' --date=short
 
 	# List people ordered by commits count
 	stats = shortlog -sn --all --no-merges
