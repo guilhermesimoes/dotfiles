@@ -10,7 +10,7 @@ def print_help(header, available_rubies)
   end
 end
 
-FileUtils.chdir('/Users/guilherme/Programs') do
+FileUtils.chdir("#{Dir.home}/Programs") do
   available_rubies = Dir.glob('ruby-*').map { |ruby| ruby.sub('ruby-', '') }
 
   if !ARGV.empty?
