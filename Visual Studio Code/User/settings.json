@@ -1,0 +1,18 @@
+{
+	// Set default font size
+	"editor.fontSize": 18,
+	// Add multiple cursors with the mouse like in Sublime Text
+	"editor.multiCursorModifier": "ctrlCmd",
+	// Draw all white space
+	"editor.renderWhitespace": "all",
+	// Enable Emmet abbreviations in languages that are not supported by default
+	"emmet.includeLanguages": {"javascript": "javascriptreact"},
+	// Ensure the last line of the file ends in a newline character on save
+	"files.insertFinalNewline": true,
+	// Remove trailing lines at the end of the file on save
+	"files.trimFinalNewlines": true,
+	// Remove trailing white space on save
+	"files.trimTrailingWhitespace": true,
+	// Stop files from being closed when deleted (which happens when switching between Git branches)
+	"workbench.editor.closeOnFileDelete": false
+}
