@@ -11,6 +11,8 @@
 	"trim_trailing_white_space_on_save": true,
 	// Ensure the last line of the file ends in a newline character on save
 	"ensure_newline_at_eof_on_save": true,
+	// Allow scrolling past the end of the file
+	"scroll_past_end": true,
 	// Prevent these files and folders from appearing in the sidebar search results
 	"folder_exclude_patterns":
 	[
