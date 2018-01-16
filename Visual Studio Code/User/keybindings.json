@@ -1,0 +1,16 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {   // Delete line
+        "key": "shift+ctrl+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {   // Switch to the next tab like a browser
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {   // Switch to the previous tab like a browser
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    }
+]
