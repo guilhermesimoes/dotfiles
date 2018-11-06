@@ -1,4 +1,7 @@
 {
+	// Turn off telemetry
+	"telemetry.enableCrashReporter": false,
+	"telemetry.enableTelemetry": false,
 	// Set default font size
 	"editor.fontSize": 18,
 	// Add multiple cursors with the mouse like in Sublime Text
