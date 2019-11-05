@@ -17,5 +17,7 @@
 	// Remove trailing white space on save
 	"files.trimTrailingWhitespace": true,
 	// Stop files from being closed when deleted (which happens when switching between Git branches)
-	"workbench.editor.closeOnFileDelete": false
+	"workbench.editor.closeOnFileDelete": false,
+	// Prevent file from being collapsed when there are more than 10 search results inside it
+	"search.collapseResults": "alwaysExpand"
 }
