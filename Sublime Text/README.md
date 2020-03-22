@@ -1,3 +1,3 @@
-All the present folders and files should be placed in the [Data Directory].
+All the present folders and files should be placed in [one of these locations].
 
-[Data Directory]: http://docs.sublimetext.info/en/sublime-text-3/basic_concepts.html#the-data-directory
+[one of these locations]: https://www.sublimetext.com/docs/3/settings.html
