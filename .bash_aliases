@@ -15,3 +15,12 @@ alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
 
 # Prettify json
 alias prettyjson="python -m json.tool"
+
+# Sublime Text shortcut
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Visual Studio Code shortcut
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
+
+# ffmpeg shortcut
+alias ffmpeg="/Users/gsi28/Library/Application\ Support/imageio/ffmpeg/ffmpeg-osx-v3.2.4"
