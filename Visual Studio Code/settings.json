@@ -1,7 +1,8 @@
 {
 	// Turn off telemetry
-	"telemetry.enableCrashReporter": false,
-	"telemetry.enableTelemetry": false,
+	"telemetry.telemetryLevel": "off",
+	// Turn off ads
+	"extensions.ignoreRecommendations": true,
 	// Set default font size
 	"editor.fontSize": 18,
 	// Add multiple cursors with the mouse like in Sublime Text
@@ -19,5 +20,22 @@
 	// Stop files from being closed when deleted (which happens when switching between Git branches)
 	"workbench.editor.closeOnFileDelete": false,
 	// Prevent file from being collapsed when there are more than 10 search results inside it
-	"search.collapseResults": "alwaysExpand"
+	"search.collapseResults": "alwaysExpand",
+	// Render color blocks instead of characters, which is clearer
+	"editor.minimap.renderCharacters": false,
+
+	// ESLint stuff
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.codeAction.disableRuleComment": {
+		"enable": true,
+		"location": "sameLine"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	}
 }
