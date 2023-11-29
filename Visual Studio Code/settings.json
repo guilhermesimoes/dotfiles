@@ -23,19 +23,14 @@
 	"search.collapseResults": "alwaysExpand",
 	// Render color blocks instead of characters, which is clearer
 	"editor.minimap.renderCharacters": false,
-
 	// ESLint stuff
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
 	"eslint.codeAction.disableRuleComment": {
 		"enable": true,
 		"location": "sameLine"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	}
 }
