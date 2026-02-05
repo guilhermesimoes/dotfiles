@@ -44,7 +44,7 @@
 
 	cont = rebase --continue
 
-	del = branch -d
+	del = branch -D
 
 	rdel = push --delete origin
 
